@@ -1,0 +1,4 @@
+div[id^="action-menus-dropdown"] .MuiList-root li {
+    display: block;
+    padding: 6px 16px !important;
+}

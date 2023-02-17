@@ -1,0 +1,112 @@
+.table-pagination {
+    align-items: center;
+    display: flex;
+}
+.pagination-text {
+    flex:0 0 30%;
+}
+.pagination-links {
+    flex:0 0 70%;
+}
+.pagination {
+    border-radius: 0.25rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+.pagination li {
+    cursor: pointer;
+}
+.pagination li span {
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    color: #192a4e;
+    display: block;
+    line-height: 1.25;
+    margin-left: -1px;
+    padding: 0.5rem 0.75rem;
+    position: relative;
+    font-weight: 600;
+}
+.pagination .active span {
+    color: #fff;
+    z-index: 1;
+    background-color: #192a4e;
+    border-color: #192a4e;
+}
+ 
+.table-responsive::-webkit-scrollbar {
+    height:2px
+}
+ 
+.table-responsive::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);  
+}
+ 
+.table-responsive::-webkit-scrollbar-thumb {
+  background-color: #4054b5;
+  outline: 1px solid #4054b5;
+}
+
+@media (max-width:767px) {
+    .pagination-text {
+        margin: 10px 0;
+        flex: 0 0 50%;
+        text-align: right;
+    }
+    .pagination-links {
+        flex: 0 0 50%;
+    }
+    .table-pagination {
+        flex-wrap: wrap;
+        margin: 10px 0;
+    }    
+    .pagination-text p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width:575px){
+    .content-header {
+        text-align: center;
+        border-bottom: 0;
+    }
+    
+    .content-header h1 {
+        font-size: 18px;
+        margin-bottom: 5px;
+        font-weight: 600;
+    }
+    .content-header:after,.content-header:before {
+        content: '';
+        clear: both;
+        display: table;
+    }
+    .content-header .pull-right {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .content-header .pull-right button {
+        min-width: 100%;
+        width: 100%;
+    }
+    
+    .pagination-text, .pagination-links {
+        flex: 0 0 100%;
+        text-align: center;
+    }
+    .pagination {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .backend-header ~ .main-content.collapse-out {
+        margin: 0;
+        background-color: #fff;
+    }
+    .backend-header ~ .sidebar-column.active {
+        z-index: 9;
+    }
+}
